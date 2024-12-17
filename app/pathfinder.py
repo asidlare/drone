@@ -8,6 +8,8 @@ logging.basicConfig(level=logging.DEBUG)
 
 
 class Pathfinder(PositiveInt):
+    __slots__ = ('x_start', 'y_start', 'x_end', 'y_end')
+
     def __init__(self, x_start: int, y_start: int, x_end: int, y_end: int) -> None:
         self.x_start = x_start
         self.y_start = y_start

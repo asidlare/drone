@@ -8,6 +8,8 @@ logging.basicConfig(level=logging.DEBUG)
 
 @total_ordering
 class Transmitter(PositiveInt):
+    __slots__ = ('x', 'y', 'r')
+
     def __init__(self, x: int, y: int, r: int) -> None:
         if (x - r) < 0 or (y - r) < 0:
             raise ValueError("Transmitter cannot be negative")
